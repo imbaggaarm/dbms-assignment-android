@@ -1,7 +1,8 @@
-package com.imbaggaarm.taiduong.dbsassignment
+package com.imbaggaarm.taiduong.dbsassignment.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.imbaggaarm.taiduong.dbsassignment.R
 
 class RegisterActivity : AppCompatActivity() {
 

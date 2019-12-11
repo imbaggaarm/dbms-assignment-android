@@ -1,18 +1,15 @@
-package com.imbaggaarm.taiduong.dbsassignment
+package com.imbaggaarm.taiduong.dbsassignment.adapters
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.imbaggaarm.taiduong.dbsassignment.views.CourseDetailActivity
+import com.imbaggaarm.taiduong.dbsassignment.viewmodels.CourseRVItemVM
+import com.imbaggaarm.taiduong.dbsassignment.R
 import kotlinx.android.synthetic.main.course_rv_item.view.*
-import org.w3c.dom.Text
-import java.util.zip.Inflater
 
 class CourseRVAdapter(private val context: Context,
                       private val dataSource: ArrayList<CourseRVItemVM>): RecyclerView.Adapter<CourseRVAdapter.CourseHolder>() {
@@ -27,7 +24,9 @@ class CourseRVAdapter(private val context: Context,
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CourseHolder {
         val view = inflater.inflate(R.layout.course_rv_item, parent, false)
-        return CourseHolder(view)
+        return CourseHolder(
+            view
+        )
     }
 
     override fun onBindViewHolder(holder: CourseHolder, position: Int) {

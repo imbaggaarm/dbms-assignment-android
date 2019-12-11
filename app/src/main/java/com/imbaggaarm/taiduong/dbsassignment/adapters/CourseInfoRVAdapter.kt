@@ -1,10 +1,12 @@
-package com.imbaggaarm.taiduong.dbsassignment
+package com.imbaggaarm.taiduong.dbsassignment.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.imbaggaarm.taiduong.dbsassignment.viewmodels.CourseInfoRVItemVM
+import com.imbaggaarm.taiduong.dbsassignment.R
 import kotlinx.android.synthetic.main.course_detail_info_item.view.*
 
 class CourseInfoRVAdapter(private val context: Context,
@@ -15,7 +17,13 @@ class CourseInfoRVAdapter(private val context: Context,
     override fun getItemCount(): Int = dataSource.count()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CourseDetailViewHolder {
-        return CourseDetailViewHolder(inflater.inflate(R.layout.course_detail_info_item, parent, false))
+        return CourseDetailViewHolder(
+            inflater.inflate(
+                R.layout.course_detail_info_item,
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: CourseDetailViewHolder, position: Int) {

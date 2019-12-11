@@ -1,4 +1,4 @@
-package com.imbaggaarm.taiduong.dbsassignment
+package com.imbaggaarm.taiduong.dbsassignment.views
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +8,11 @@ import android.widget.Button
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.imbaggaarm.taiduong.dbsassignment.R
+import com.imbaggaarm.taiduong.dbsassignment.adapters.CommentRVAdapter
+import com.imbaggaarm.taiduong.dbsassignment.adapters.CourseInfoRVAdapter
+import com.imbaggaarm.taiduong.dbsassignment.viewmodels.CommentRVItemVM
+import com.imbaggaarm.taiduong.dbsassignment.viewmodels.CourseInfoRVItemVM
 import kotlinx.android.synthetic.main.activity_course_detail.*
 
 class CourseDetailActivity : AppCompatActivity() {
@@ -70,12 +74,20 @@ class CourseDetailActivity : AppCompatActivity() {
         when(selectedIndex) {
             INDEX_COMMENTS -> {
                 setCommentData()
-                val adapter = CommentRVAdapter(this, dataList as ArrayList<CommentRVItemVM>)
+                val adapter =
+                    CommentRVAdapter(
+                        this,
+                        dataList as ArrayList<CommentRVItemVM>
+                    )
                 recyclerView.adapter = adapter
             }
             INDEX_HOME -> {
                 setCourseInfoData()
-                val adapter = CourseInfoRVAdapter(this, dataList as ArrayList<CourseInfoRVItemVM>)
+                val adapter =
+                    CourseInfoRVAdapter(
+                        this,
+                        dataList as ArrayList<CourseInfoRVItemVM>
+                    )
                 recyclerView.adapter = adapter
             }
         }
@@ -88,7 +100,8 @@ class CourseDetailActivity : AppCompatActivity() {
                 "Tài Dương",
                 "url",
                 "Bài giảng khá hay",
-                "1 giờ trước")
+                "1 giờ trước"
+            )
         )
 
         dataList.add(
@@ -96,7 +109,8 @@ class CourseDetailActivity : AppCompatActivity() {
                 "Công Anh",
                 "url",
                 "Bài giảng tàm tạm thôi",
-                "23:08")
+                "23:08"
+            )
         )
 
         dataList.add(
@@ -104,7 +118,8 @@ class CourseDetailActivity : AppCompatActivity() {
                 "Tài Dương",
                 "url",
                 "Bài giảng khá hay",
-                "1 giờ trước")
+                "1 giờ trước"
+            )
         )
 
         dataList.add(
@@ -112,7 +127,8 @@ class CourseDetailActivity : AppCompatActivity() {
                 "Tài Dương",
                 "url",
                 "Bài giảng khá hay",
-                "1 giờ trước")
+                "1 giờ trước"
+            )
         )
 
         dataList.add(
@@ -120,7 +136,8 @@ class CourseDetailActivity : AppCompatActivity() {
                 "Tài Dương",
                 "url",
                 "Bài giảng khá hay",
-                "1 giờ trước")
+                "1 giờ trước"
+            )
         )
         dataList.addAll(dataList)
         dataList.addAll(dataList)
@@ -128,7 +145,8 @@ class CourseDetailActivity : AppCompatActivity() {
 
     private fun setCourseInfoData() {
         val text = resources.getString(R.string.course_detail_placeholder)
-        val info = CourseInfoRVItemVM(text)
+        val info =
+            CourseInfoRVItemVM(text)
         dataList = ArrayList()
         dataList.add(info)
     }
@@ -146,7 +164,9 @@ class CourseDetailActivity : AppCompatActivity() {
     }
 
     private fun setBtnAppearance(btn: Button, isHighlighted: Boolean) {
-        val color = if (isHighlighted) ContextCompat.getColor(this, R.color.colorPrimary) else Color.WHITE
+        val color = if (isHighlighted) ContextCompat.getColor(this,
+            R.color.colorPrimary
+        ) else Color.WHITE
         btn.setTextColor(color)
     }
 

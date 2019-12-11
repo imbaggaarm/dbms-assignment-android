@@ -1,12 +1,13 @@
-package com.imbaggaarm.taiduong.dbsassignment
+package com.imbaggaarm.taiduong.dbsassignment.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.imbaggaarm.taiduong.dbsassignment.viewmodels.CommentRVItemVM
+import com.imbaggaarm.taiduong.dbsassignment.R
 import kotlinx.android.synthetic.main.comment_rv_item.view.*
-import java.util.zip.Inflater
 
 class CommentRVAdapter(private val context: Context,
                        private val dataSource: ArrayList<CommentRVItemVM>): RecyclerView.Adapter<CommentRVAdapter.CommentViewHolder>() {
@@ -17,7 +18,13 @@ class CommentRVAdapter(private val context: Context,
     override fun getItemCount() = dataSource.count()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommentViewHolder {
-        return CommentViewHolder(inflater.inflate(R.layout.comment_rv_item, parent, false))
+        return CommentViewHolder(
+            inflater.inflate(
+                R.layout.comment_rv_item,
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: CommentViewHolder, position: Int) {

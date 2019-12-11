@@ -1,11 +1,13 @@
-package com.imbaggaarm.taiduong.dbsassignment
+package com.imbaggaarm.taiduong.dbsassignment.views
 
 import android.os.Bundle
-import android.provider.ContactsContract
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.imbaggaarm.taiduong.dbsassignment.R
+import com.imbaggaarm.taiduong.dbsassignment.adapters.ProfileListViewAdapter
+import com.imbaggaarm.taiduong.dbsassignment.viewmodels.ProfileLVItemVM
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 /**
@@ -29,7 +31,11 @@ class ProfileFragment : Fragment() {
 
         setDataForListView()
 
-        val adapter = ProfileListViewAdapter(requireActivity(), dataList)
+        val adapter =
+            ProfileListViewAdapter(
+                requireActivity(),
+                dataList
+            )
         listView.adapter = adapter
 
         listView.setOnItemClickListener { parent, view, position, id ->
@@ -43,9 +49,27 @@ class ProfileFragment : Fragment() {
 
     private fun setDataForListView() {
         dataList = ArrayList<ProfileLVItemVM>()
-        dataList.add(ProfileLVItemVM("Cập nhật thông tin", R.drawable.ic_edit_black_24dp, R.drawable.ic_keyboard_arrow_right_black_24dp))
-        dataList.add(ProfileLVItemVM("Xoá tài khoản", R.drawable.ic_delete_black_24dp, R.drawable.ic_keyboard_arrow_right_black_24dp))
-        dataList.add(ProfileLVItemVM("Đăng xuất", R.drawable.ic_logout_24dp, R.drawable.ic_keyboard_arrow_right_black_24dp))
+        dataList.add(
+            ProfileLVItemVM(
+                "Cập nhật thông tin",
+                R.drawable.ic_edit_black_24dp,
+                R.drawable.ic_keyboard_arrow_right_black_24dp
+            )
+        )
+        dataList.add(
+            ProfileLVItemVM(
+                "Xoá tài khoản",
+                R.drawable.ic_delete_black_24dp,
+                R.drawable.ic_keyboard_arrow_right_black_24dp
+            )
+        )
+        dataList.add(
+            ProfileLVItemVM(
+                "Đăng xuất",
+                R.drawable.ic_logout_24dp,
+                R.drawable.ic_keyboard_arrow_right_black_24dp
+            )
+        )
     }
 
 }

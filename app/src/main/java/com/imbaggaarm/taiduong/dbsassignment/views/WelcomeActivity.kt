@@ -1,8 +1,9 @@
-package com.imbaggaarm.taiduong.dbsassignment
+package com.imbaggaarm.taiduong.dbsassignment.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.imbaggaarm.taiduong.dbsassignment.R
 import kotlinx.android.synthetic.main.activity_welcome.*
 
 //, View.OnClickListener

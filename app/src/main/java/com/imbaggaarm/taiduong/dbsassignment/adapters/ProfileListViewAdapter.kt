@@ -1,4 +1,4 @@
-package com.imbaggaarm.taiduong.dbsassignment
+package com.imbaggaarm.taiduong.dbsassignment.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.imbaggaarm.taiduong.dbsassignment.viewmodels.ProfileLVItemVM
+import com.imbaggaarm.taiduong.dbsassignment.R
 
 class ProfileListViewAdapter(private val context: Context,
                              private val dataSource: ArrayList<ProfileLVItemVM>): BaseAdapter() {
