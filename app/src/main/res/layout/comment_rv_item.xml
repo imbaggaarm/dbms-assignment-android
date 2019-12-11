@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp">
+
+    <ImageView
+        android:id="@+id/imgVProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/small_logo"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/comment_bg">
+
+            <TextView
+                android:id="@+id/txtVName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tai Duong"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/txtVText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bài học rất hay, tuy nhiên giảng viên còn thiếu nhiệt tình"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtVTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="1 giờ"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+</LinearLayout>

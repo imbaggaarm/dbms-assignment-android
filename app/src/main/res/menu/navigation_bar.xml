@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="@string/title_profile"/>
+    <item
+        android:id="@+id/mycourses"
+        android:icon="@drawable/ic_collections_bookmark_black_24dp"
+        android:title="@string/title_my_courses"/>
+    <item android:id="@+id/courses"
+        android:icon="@drawable/courses_24dp"
+        android:title="@string/title_courses"/>
+</menu>
